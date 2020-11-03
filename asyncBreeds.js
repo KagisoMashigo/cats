@@ -7,12 +7,10 @@ const breedDetailsFromFile = function(breed, returnBreedData) {
     if (!error) {
       returnBreedData(data);
     } else {
-      console.log(error);
+      returnBreedData(undefined);
     }
   });
 };
 
-const printCatbreed = breed => {console.log('Return Value: ', breed)};
-
-breedDetailsFromFile('Bombay', printCatbreed);
+module.exports = breedDetailsFromFile;
 
